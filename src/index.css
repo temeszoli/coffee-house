@@ -342,7 +342,12 @@ input, textarea {
 
 /*WebshopPage component*/
 .webshop-page{
-  min-height: 250vh;
+  min-height: 320vh;
+}
+
+.drink-name,
+.cart-item h3{
+  color: brown;
 }
 
 .left-webshop-grid-item img{
@@ -364,14 +369,56 @@ input, textarea {
   position: fixed;
   font-size: 20px;
   right: 85px;
-  top: 72.5%;
+  top: 71.5%;
 }
 
 .counter-background{
   background-color: red;
   border-radius: 50%;
-  width: 30px;
-  height: 23px;
+  width: 28px;
+  height: 21px;
   border-color: red;
   padding-bottom: 10px;
+}
+
+.discount-message{
+  color: #0080ff;
+}
+
+.discount-message img {
+  width: 15px;
+}
+
+.line{
+  border-top: 2px solid brown;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 50%;
+}
+
+/*Cart component*/
+.cart-item{
+  display: inline-block;
+  margin-right: 4em;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.cart-item button{
+  margin: 5px;
+}
+
+.money{
+  text-decoration: none;
+  color: green;
+}
+
+.cart-container h1{
+  margin-bottom: 1.5em;
+}
+
+.total{
+  margin-top: 2em;
 }

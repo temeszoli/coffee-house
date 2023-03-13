@@ -5,9 +5,9 @@ import AboutPage from '../components/AboutPage';
 import DrinksPage from '../components/DrinksPage';
 import LoginPage from '../components/LoginPage';
 import RegisterPage from '../components/RegisterPage';
-import PaymentPage from '../components/PaymentPage';
 import WebshopPage from '../components/WebshopPage';
 import Drink from '../components/Drink';
+import what from '../assets/what.gif'
 
 function App() {
   return (
@@ -20,12 +20,17 @@ function App() {
           <Route path=':drinkId' element={<Drink />}/>
           <Route index element={<h3>Select one of the coffees from above</h3>}/>
         </Route>
-        <Route  path='webshop' element={<WebshopPage />}>
-          <Route path='payment' element={<PaymentPage />}/>
-        </Route>
+        <Route  path='webshop' element={<WebshopPage />}/>
         <Route path='login' element={<LoginPage />}/>
         <Route path='register' element={<RegisterPage />}/>
-        <Route path='*' element={<h1>Page Not Found</h1>}/>
+        <Route path='*' element={
+          <>
+            <h1>Page Not Found</h1>
+            <p>Showing the ' * ' route.</p>
+            <p>The Payment page going to be an Api from a bank I suppose.</p>
+            <img src={what} alt="" />
+          </>
+        }/>
       </Routes>
 
       <footer className="header-container">

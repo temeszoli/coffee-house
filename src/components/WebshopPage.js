@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { getWebshopDrinks } from "../data/drinkList";
 import cartPic from '../assets/cart.png';
+import linkPic from '../assets/external-link.png';
+import Cart from '../components/Cart';
 
 export default function WebshopPage(){
     const webshopDrinks = getWebshopDrinks();
     const [cart, setCart] = useState([]);
-    const cartItems = cart.length;
 
     const addToCart = (drink) => {
         const counter = document.querySelector('.webshop-page .cart-counter');
@@ -18,6 +20,7 @@ export default function WebshopPage(){
         }else{
             setCart(prevCart => [...prevCart, { ...drink, quantity: 1}])
         }
+        console.log(cart);
     }
 
     return(
@@ -28,14 +31,18 @@ export default function WebshopPage(){
                     <p>Countless ( 5 ) packed coffee in one place </p>
                 </div>
             </div>
+            <h3 className='discount-message'>Our registered customers will get 10% discount from their orders, celebrating the launch of this website. 
+                    The promotion lasts until the end of this year. <span><Link to='/register'><img src={linkPic} alt="" /></Link></span>
+            </h3>
             <div className="webshop-grid-container">
+                
                 {webshopDrinks.map(drink => (
                     <div key={drink.id} className="webshop-grid-container">
                         <div className="left-webshop-grid-item grid-item">
                             <img src={drink.packedImg} alt="" />
                         </div>
                         <div className="right-webshop-grid-item grid-item">
-                            <h2>{drink.name}</h2>
+                            <h2 className="drink-name">{drink.name}</h2>
                             <h3>Ingredients:</h3>
                             {drink.ingredients.map(item => (
                                 <p>{item}</p>
@@ -47,8 +54,12 @@ export default function WebshopPage(){
                 ))}
             </div>
             <a href='#shopping-cart'><img className='cart-img' src={cartPic} alt="" /></a>
-            <p className='cart-counter'>{cartItems}</p>
-            <div id="shopping-cart"></div>
+            <p className='cart-counter'>{cart.reduce((acc, i) => acc + (i.quantity), 0)}</p>
+            <br />
+            <div className="line"></div>
+            <div id="shopping-cart">
+                <Cart cart={cart} setCart={setCart}/>
+            </div>
         </div>
     );
 }
