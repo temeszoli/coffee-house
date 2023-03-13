@@ -258,6 +258,10 @@ li a:hover{
   height: 500px;
 }
 
+.right h2{
+  color: brown;
+}
+
 .drink-grid-container,
 .webshop-grid-container{
   display: grid;
