@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Coffee house referencia projekt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ez a projekt az első komolyabb próbálkozásom annak céljából, hogy mindent amit tanultam viszont láthassak egy kész weboldal formájában. Első sorban frontend technológiákat szerettem volna használni, a fejlesztés ezen része fogott meg.
 
-## Available Scripts
+## A projekt tervezése
 
-In the project directory, you can run:
+Az alapötlet már az első kurzus hallgatása során megfogalmazódott bennem, egy kávéház weboldalát szerettem volna elkészíteni, akkor még nem tudtam, milyen techológiát használva (ekkor még csak html-el és css-el ismerkedtem). Ekkor létrehoztam egy jegyzetet, amit az elvégzett kurzusokkal párhuzamosan egészítgettem ki, különböző franchiseok weboldalait vetettem össze, a kávéház témához illő színeket, betűtípusokat, felhasználható képeket kerestem, kigondoltam, hogy milyen objektumokat szeretnék használni, azok milyen tulajdonságokkal rendelkezzenek, stb..
 
-### `npm start`
+Miután megjártam a Codecademyt és a Simplilearnt, egy fejlesztő ismerősöm tanácsára a linkedIn premium kurzusok közül kezdtem csemegézni, ez úgy érzem nagyban segített, hogy mostanra némi javascript ismerettel a hátam mögött el tudjam dönteni, milyen frameworkben szeretnék fejleszteni. A React mellett döntöttem.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A premiumom lejárta után a tervezés következő lépéseként összeszedtem milyen komponensekre lehet szükségem és milyen lépésekben szeretném végigvinni a projektet.
+Ezzel minden készen állt, hogy elkezdhessek kódolni.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## A megvalósítás lépései
 
-### `npm test`
+1. Létrehoztam a komponenseket.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Minden komponens kapott egy-egy placeholder headert, hogy később lássam működik -e a routing.
 
-### `npm run build`
+2. React Router konfigurálása
+3. Komponensek frontendjének elkészítése
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A megvalósítás ezen fázisában a legtöbb időt a css poziciónálása vitte el, mire a végére értem az összes kurzusnak, kijöttem kicsit a gyakorlatból. Külön fájlba írtam mindent (index.css), nem inline. A media queryket hagytam a végére.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## A projekt jövője.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ezen a ponton jutottam el oda, hogy elég lesz -e vajon ha itt megállok, a frontend ugyan készen volt, de az oldal műköséde koránt sem volt 100%-os. Ahhoz, hogy az account creation, login és a webshop funkciók úgy működjenek, ahogy azt szerettem volna, szükségem volt szerver oldali programozásra is. Node.js-el, express-el, mongodb-vel és firebase auth-al találkoztam a hallgatott kurzusok során, de egyik sem volt az erősségem. Belevágtam. 
 
-### `npm run eject`
+## További megjegyzések
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+A projekt készítése alatt felhasznált képek csak gyakorlás céljából lettek használva, nem célom reklámozni egy kávézó franchiset vagy kávémárkát sem.
+Március (2023) végéig még szeretnék két weboldalon dolgozni, az egyik egy blog applikáció lesz a másik pedig egy CV weboldal. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
