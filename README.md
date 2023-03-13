@@ -24,7 +24,7 @@ Ezzel minden készen állt, hogy elkezdhessek kódolni.
 
 ## A projekt jövője.
 
-Ezen a ponton jutottam el oda, hogy elég lesz -e vajon ha itt megállok, a frontend ugyan készen volt, de az oldal műköséde koránt sem volt 100%-os. Ahhoz, hogy az account creation, login és a webshop funkciók úgy működjenek, ahogy azt szerettem volna, szükségem volt szerver oldali programozásra is. Node.js-el, express-el, mongodb-vel és firebase auth-al találkoztam a hallgatott kurzusok során, de egyik sem volt az erősségem. Belevágtam. 
+Ezen a ponton jutottam el oda, hogy elég lesz -e vajon ha itt megállok, a frontend ugyan készen volt, de az oldal működése koránt sem volt 100%-os. Ahhoz, hogy az account creation, login és a webshop funkciók úgy működjenek, ahogy azt szerettem volna, szükségem volt szerver oldali programozásra is. Node.js-el, express-el, mongodb-vel és firebase auth-al találkoztam a hallgatott kurzusok során, de egyik sem volt az erősségem. Belevágtam. 
 
 ## További megjegyzések
 
