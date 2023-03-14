@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 export default function Cart({ cart, setCart }){
+
+  const [message, setMessage] = useState('');
 
     const increase = (name) => {
         const cartCopy = [...cart]
@@ -20,6 +23,14 @@ export default function Cart({ cart, setCart }){
         setCart(cartCopy)
       }
 
+      const total = cart.reduce((acc, i) => acc + (i.quantity * i.price), 0).toFixed(2);
+
+      /*if(user){
+        total *= 0.9;
+      }else{
+        setMessage('Create an account for a 10% discount on your purchase.')
+      }*/
+
     return(
         <div className='cart-container'>
             <h1>Shopping Cart</h1>
@@ -37,8 +48,9 @@ export default function Cart({ cart, setCart }){
               ))
             : <p>Add an item to your cart</p>}
             <div className='total'>
-                <h2>Total: <span className="money">${cart.reduce((acc, i) => acc + (i.quantity * i.price), 0).toFixed(2)}</span></h2>
+                <h2>Total: <span className="money">${total}</span></h2>
                 <Link to='/payment'><button className="btn">Proceed to checkout</button></Link>
+                <p>{message}</p>
             </div>
         </div>
     );

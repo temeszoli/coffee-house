@@ -1,47 +1,39 @@
+:root{
+  --header-hight: 10em;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-family: 'Playfair Display', serif;
   background-color: #303030;
   color: white;
   position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 /* HomePage component*/
 .App {
-  min-height: 100vh;
   text-align: center;
 }
 
-.header-container{
+.header-container, footer{
+  display: flex;
+  justify-content: center;
   background-image: url(../src/assets/burgundy.jpg);
-  height: 10em;
+  height: var(--header-hight);
   width: 100%;
 }
-
 nav{
-  padding-top: 5em;
+  align-self: flex-end;
 }
 
 .navbar-logo{
-  width: 170px;
+  height: var(--header-hight);
   position: absolute;
   left: 0;
 }
 
 nav a{
   display: inline-block;
-  padding-top: 12px;
-  padding-bottom: 12px;
   text-decoration: none;
   font-weight: bold;
   color: #FEFEFE;
@@ -64,7 +56,7 @@ nav a:hover{
 
 .nav-right{
   position: absolute;
-  top: 6em;
+  top: 6.5em;
   right: 3em;
 }
 
@@ -77,10 +69,9 @@ nav a:hover{
 }
 
 footer{
-  margin-top: 50px;
-  position: absolute;
   bottom: 0;
   padding-top: 2em;
+  margin-top: 2em;
   color:white;
 }
 
@@ -94,8 +85,9 @@ footer a:hover{
 }
 
 .welcome{
-  margin-top: 0;
   background-image: url(../src/assets/welcomebackg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
   height: 28em;
   display: flex;
   justify-content: center;
@@ -104,14 +96,10 @@ footer a:hover{
 
 .welcome-about{
   background-image: url(../src/assets/aboutHeader.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
 }
 
 .welcome-webshop{
   background-image: url(../src/assets/webshopHeader.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
 }
 
 .welcome .square{
@@ -128,30 +116,43 @@ footer a:hover{
   margin-bottom: 0;
 }
 
-p{
-  font-weight: bold;
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
 }
 
-.home-grid-container{
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 50px 50px;
-  margin-top: 50px;
-  margin-left: 10em;
-  margin-right: 10em;
-  align-items: center;
+.flex-item{
+  align-self: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  flex: 46%;
 }
 
-.home-grid-item{
-  margin-bottom: 20px;
+.flex-container>div>img{
+  width: 450px;
+  margin-bottom: 3em;
+}
+
+.item01, .item04{
+  margin-bottom: 2em;
+}
+
+.item02, .item06{
+  text-align: left;
+}
+
+.item03{
+  text-align: center;
+}
+
+.item01>p, .item04>p, .item05>p{
   text-align: justify;
-  max-width: 60%;
 }
 
 .btn{
   border-color: rgb(116,24,5);
   padding: 16px 32px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -168,35 +169,12 @@ p{
   background-color: rgb(116,24,5);
 }
 
-.rightie-1 img,
-.rightie-3 img,
-.leftie-2 img{
-  width: 625px;
-}
-
-.leftie-3,
-.rightie-3{
-  margin-bottom: 15em;
-}
-
-.rightie-1,
-.rightie-2,
-.rightie-3{
-  justify-self: left;
-}
-
-.leftie-1,
-.leftie-2,
-.leftie-3{
-  justify-self: right;
-}
-
 /*AboutPage component*/
 .about-container{
   margin: auto;
   padding-top: 20px;
   display: block;
-  min-height: 162vh;
+  min-height: 170vh;
   text-align: justify;
   width: 35%;
 }
@@ -425,4 +403,107 @@ input, textarea {
 
 .total{
   margin-top: 2em;
+}
+
+/*MQs*/
+@media screen and (max-width: 980px) {
+  .welcome .square{
+    width: 75%;
+    margin-bottom: 7em;
+  }
+
+  .welcome-about .square, .welcome-drinks .square, .welcome-webshop .square{
+    margin-top: 4em;
+  }
+
+  nav{
+    position: absolute;
+    left: 170px;
+    width: 100%;
+  }
+
+  nav a{
+    display: flex;
+    text-align: right;
+    padding: 9.6px;
+  }
+
+  nav a:hover{
+    padding: 9.6px;
+  }
+
+  .nav-active{
+    background: black;
+    border-color: black;
+  }
+
+  .nav-right{
+    top: 10em;
+    right: 0.1em;
+    padding: 5px;
+  }
+
+  .nav-right:hover{
+    border-right: none;
+    background: rgba(0,0,0,0.4);
+  }
+
+  .flex-container{
+    flex-direction: column;
+    margin-top: -5em;
+  }
+
+  .flex-item{
+    width: 80%;
+    align-self: center;
+  }
+
+  .flex-container>div>img{
+    width: 350px;
+    margin-bottom: 0;
+  }
+
+  .item02, .item06{
+    text-align: center;
+  }
+
+  .item01{
+    order: 2;
+  }
+
+  .item02{
+    order: 1;
+  }
+
+  .item03{
+    order:3;
+  }
+
+  .item04{
+    order: 4;
+  }
+
+  .item05{
+    order: 6;
+  }
+
+  .item06{
+    order: 5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome .square{
+    height: 20%;
+    margin-bottom: 21.5em;
+    font-size: 14px;
+  }
+
+  .welcome h2{
+    margin-top: -1em;
+  }
+
+  .flex-container{
+    margin-top: -15em;
+  }
 }

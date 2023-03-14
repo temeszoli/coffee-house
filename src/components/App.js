@@ -8,6 +8,7 @@ import RegisterPage from '../components/RegisterPage';
 import WebshopPage from '../components/WebshopPage';
 import Drink from '../components/Drink';
 import what from '../assets/what.gif'
+import Footer from './Footer';
 
 function App() {
   return (
@@ -32,10 +33,7 @@ function App() {
           </>
         }/>
       </Routes>
-
-      <footer className="header-container">
-        &copy;2023 | <a href="/">Premium Coffee House</a>
-      </footer>
+      <Footer />
     </div>
   );
 }
