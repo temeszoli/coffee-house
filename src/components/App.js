@@ -7,7 +7,7 @@ import LoginPage from '../components/LoginPage';
 import RegisterPage from '../components/RegisterPage';
 import WebshopPage from '../components/WebshopPage';
 import Drink from '../components/Drink';
-import what from '../assets/what.gif'
+import PageNotFound from './PageNotFound';
 import Footer from './Footer';
 
 function App() {
@@ -24,14 +24,7 @@ function App() {
         <Route  path='webshop' element={<WebshopPage />}/>
         <Route path='login' element={<LoginPage />}/>
         <Route path='register' element={<RegisterPage />}/>
-        <Route path='*' element={
-          <>
-            <h1>Page Not Found</h1>
-            <p>Showing the ' * ' route.</p>
-            <p>The Payment page going to be an Api from a bank I suppose.</p>
-            <img src={what} alt="" />
-          </>
-        }/>
+        <Route path='*' element={<PageNotFound />}/>
       </Routes>
       <Footer />
     </div>

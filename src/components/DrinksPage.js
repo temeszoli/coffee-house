@@ -1,5 +1,6 @@
 import { Outlet, NavLink} from 'react-router-dom';
 import { getDrinks } from '../data/drinkList.js';
+import AccountLogo from "./AccountLogo";
 
 export default function DrinksPage(){
     const drinks = getDrinks();
@@ -7,6 +8,7 @@ export default function DrinksPage(){
 
     return(
         <div className='drinks-container'>
+            <AccountLogo />
             <div className="welcome welcome-drinks">
                 <div className="square">
                     <h2>Drinks to order</h2>

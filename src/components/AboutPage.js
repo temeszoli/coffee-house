@@ -1,8 +1,10 @@
 import aboutPic from '../assets/aboutPic.jpg';
+import AccountLogo from "./AccountLogo";
 
 export default function AboutPage(){
     return(
         <>
+            <AccountLogo />
             <div className="welcome welcome-about">
                 <div className="square">
                     <h2>Get to know us better!</h2>

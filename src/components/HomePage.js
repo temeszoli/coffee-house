@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import coffees from '../assets/coffees.jpg';
 import piano from '../assets/piano.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import packedcoffee from '../assets/packedcoffee.png';
+import AccountLogo from "./AccountLogo";
 
 export default function HomePage(){
     return(
         <>
+            <AccountLogo />
             <div className="welcome">
                 <div className="square">
                     <h2>Welcome to the Premium Coffee House & Bar!</h2>
@@ -38,7 +39,7 @@ export default function HomePage(){
                     <p>
                         From Thursday to Sunday night, we are waiting our guests with live
                         performances from various bands from the country. Every week is a new opportunity 
-                        to join the party! <FontAwesomeIcon icon='fa-solid fa-party-horn' />
+                        to join the party!
                     </p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec elementum mauris. Proin eleifend varius condimentum. 

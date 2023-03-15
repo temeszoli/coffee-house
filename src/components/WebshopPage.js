@@ -4,6 +4,7 @@ import { getWebshopDrinks } from "../data/drinkList";
 import cartPic from '../assets/cart.png';
 import linkPic from '../assets/external-link.png';
 import Cart from '../components/Cart';
+import AccountLogo from "./AccountLogo";
 
 export default function WebshopPage(){
     const webshopDrinks = getWebshopDrinks();
@@ -25,6 +26,7 @@ export default function WebshopPage(){
 
     return(
         <div className='webshop-page'>
+            <AccountLogo />
             <div className="welcome welcome-webshop">
                 <div className="square">
                     <h2>Webshop</h2>
@@ -34,8 +36,7 @@ export default function WebshopPage(){
             <h3 className='discount-message'>Our registered customers will get 10% discount from their orders, celebrating the launch of this website. 
                     The promotion lasts until the end of this year. <span><Link to='/register'><img src={linkPic} alt="" /></Link></span>
             </h3>
-            <div className="webshop-grid-container">
-                
+            <div className="webshop-grid-container resp-container">
                 {webshopDrinks.map(drink => (
                     <div key={drink.id} className="webshop-grid-container">
                         <div className="left-webshop-grid-item grid-item">
@@ -45,7 +46,7 @@ export default function WebshopPage(){
                             <h2 className="drink-name">{drink.name}</h2>
                             <h3>Ingredients:</h3>
                             {drink.ingredients.map(item => (
-                                <p>{item}</p>
+                                <p key={item}>{item}</p>
                             ))}
                             <p>Prize: ${drink.price}</p>
                             <button onClick={() => addToCart(drink)} className="btn">Add to cart</button>
