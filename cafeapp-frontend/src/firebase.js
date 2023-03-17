@@ -1,14 +1,10 @@
-import firebase from 'firebase';
+import admin from 'firebase-admin';
+import fs from 'fs';
 
-const firebaseConfig = {
-    apiKey: "AIzaSyBdc7GI_uNW4-CWpPuyKrE8qSo5UY4nq8g",
-    authDomain: "cafeapp-3d040.firebaseapp.com",
-    projectId: "cafeapp-3d040",
-    storageBucket: "cafeapp-3d040.appspot.com",
-    messagingSenderId: "637302502607",
-    appId: "1:637302502607:web:cc335b9490388a5656b3ba"
-};
+const credentials = JSON.parse(
+    fs.readFileSync('./credentials.json')
+);
 
-firebase.initializeApp(firebaseConfig);
-
-export default firebase;
+admin.initializeApp({
+    credential: admin.credential.cert(credentials),
+})
