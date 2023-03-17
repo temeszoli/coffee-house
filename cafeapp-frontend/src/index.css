@@ -305,14 +305,6 @@ input, textarea {
   color: #303030;
 }
 
-.errorMsg{
-  color: red;
-}
-
-.successMsg{
-  color: green;
-}
-
 /*RegisterPage component*/
 .register-page{
   min-height: 56vh;
