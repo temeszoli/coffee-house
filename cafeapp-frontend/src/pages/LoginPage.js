@@ -15,6 +15,7 @@ export default function LoginPage(){
         try {
             if(email !== '' && password !== ''){
                 await signInWithEmailAndPassword(getAuth(), email, password);
+                alert(`${email} successfully logged in!`);
                 navigate('/webshop');
             }else{
                 setError('Please fill the email and the password field to log in!');
