@@ -20,11 +20,16 @@ Ezzel minden készen állt, hogy elkezdhessek kódolni.
 2. React Router konfigurálása
 3. Komponensek frontendjének elkészítése
 
-- A megvalósítás ezen fázisában a legtöbb időt a css poziciónálása vitte el, mire a végére értem az összes kurzusnak, kijöttem kicsit a gyakorlatból. Külön fájlba írtam mindent (index.css), nem inline. A media queryket hagytam a végére.
+- A megvalósítás ezen fázisában a legtöbb időt a css poziciónálása vitte el, mire a végére értem az összes kurzusnak, kijöttem kicsit a gyakorlatból. Külön fájlba írtam mindent (index.css), nem inline. A későbbi projektekben terveztem a tailwindet kipróbálni, egész barátságosnak tűnik. A media queryket hagytam a végére.
 
 ## A projekt jövője.
 
 Ezen a ponton jutottam el oda, hogy elég lesz -e vajon ha itt megállok. A frontend ugyan készen volt, de az oldal működése koránt sem volt 100%-os. Ahhoz, hogy az account creation, login és a webshop funkciók úgy működjenek, ahogy azt szerettem volna, szükségem volt szerver oldali programozásra is. Node.js-el, express-el, mongodb-vel és firebase auth-al találkoztam a hallgatott kurzusok során, de egyik sem volt az erősségem. Belevágtam. 
+
+Update: 
+
+03.20.
+Firebase integrálást backend nélkül sikerült megvalósítani.
 
 ## További megjegyzések
 
