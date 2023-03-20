@@ -1,19 +1,20 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import userPic from '../assets/account.png';
-import {getAuth, signOut} from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import {signOut} from 'firebase/auth';
+import {auth} from '../firebase';
 
 export default function AccountLogo(){
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const [user] = useAuthState(auth);
     const [isLoading, setIsLoading] = useState(false);
-      
+
+    const navigate = useNavigate();
+
     const handleLogout = async () => {
         setIsLoading(true);
-        setIsLoggedIn(false);
         alert('You have successfully logged out');
       
         try {
-            const auth = getAuth();
             await signOut(auth);
           } catch (error) {
             console.error(error);
@@ -22,19 +23,25 @@ export default function AccountLogo(){
           }
         };
 
-        if(isLoggedIn){
-            return(
-                <div className="nav-right">
+    const handleLogin = () => {
+        navigate('/login');
+    }
+
+        return(
+            <>
+            {user 
+                ?(
+                    <div className="nav-right">
                     <button className='btn' onClick={handleLogout} disabled={isLoading}>
                     Logout
                     </button>
                 </div>
-            );
-        }else{
-            return(
-                <div className="nav-right">
-                    <NavLink to='/login'><img className='user-img' src={userPic} alt="Account managing" /></NavLink>
-                </div> 
-            );
-        }
-}
+                ) : (
+                    <div className="nav-right">
+                    <button className='btn' onClick={handleLogin} disabled={isLoading}>Login</button>
+                    </div> 
+                )
+            }
+            </>  
+        );
+    }

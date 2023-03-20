@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+import Discount from '../components/Discount';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import {auth} from '../firebase';
 
 export default function Cart({ cart, setCart }){
 
-  const [message, setMessage] = useState('');
+  const [user] = useAuthState(auth);
 
     const increase = (name) => {
         const cartCopy = [...cart]
@@ -23,13 +25,7 @@ export default function Cart({ cart, setCart }){
         setCart(cartCopy)
       }
 
-      const total = cart.reduce((acc, i) => acc + (i.quantity * i.price), 0).toFixed(2);
-
-      /*if(user){
-        total *= 0.9;
-      }else{
-        setMessage('Create an account for a 10% discount on your purchase.')
-      }*/
+      var total = cart.reduce((acc, i) => acc + (i.quantity * i.price), 0).toFixed(2);
 
     return(
         <div className='cart-container'>
@@ -51,8 +47,14 @@ export default function Cart({ cart, setCart }){
             </div>
             <div className='total'>
                 <h2>Total: <span className="money">${total}</span></h2>
+                {!user && 
+                <p>Login to get 10% discount at the checkout!</p>
+                }
+                {user &&
+                  <Discount cart={cart} total={total} />
+                }   
                 <Link to='/payment'><button className="btn">Proceed to checkout</button></Link>
-                <p>{message}</p>
+                {user && <p>*Only for registered costumers!</p>}
             </div>
         </div>
     );

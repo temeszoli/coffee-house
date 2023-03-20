@@ -21,7 +21,6 @@ export default function WebshopPage(){
         }else{
             setCart(prevCart => [...prevCart, { ...drink, quantity: 1}])
         }
-        console.log(cart);
     }
 
     return(
