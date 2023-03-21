@@ -24,7 +24,7 @@ Ezzel minden készen állt, hogy elkezdhessek kódolni.
 
 ## A projekt jövője.
 
-A későbbiekben tervezek az oldalon expresst és mongodb-t használni.
+A későbbiekben tervezek az oldalon expresst és mongodb-t használni, hogy jobban átlássam, mi történik szerver oldalon.
 
 Update: 
 
@@ -34,5 +34,5 @@ Firebase integrálást backend nélkül sikerült megvalósítani.
 ## További megjegyzések
 
 A projekt készítése alatt felhasznált képek csak gyakorlás céljából lettek használva, nem célom reklámozni egy kávézó franchiset vagy kávémárkát sem.
-Március (2023) végéig még szeretnék két weboldalon dolgozni, az egyik egy blog applikáció lesz a másik pedig egy CV weboldal. 
+Március (2023) végéig még szeretnék egy weboldalon dolgozni, ami egy CV weboldal lesz. 
 
