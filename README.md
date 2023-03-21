@@ -20,14 +20,19 @@ Ezzel minden készen állt, hogy elkezdhessek kódolni.
 2. React Router konfigurálása
 3. Komponensek frontendjének elkészítése
 
-- A megvalósítás ezen fázisában a legtöbb időt a css poziciónálása vitte el, mire a végére értem az összes kurzusnak, kijöttem kicsit a gyakorlatból. Külön fájlba írtam mindent (index.css), nem inline. A media queryket hagytam a végére.
+- A megvalósítás ezen fázisában a legtöbb időt a css poziciónálása vitte el, mire a végére értem az összes kurzusnak, kijöttem kicsit a gyakorlatból. Külön fájlba írtam mindent (index.css), nem inline. A media queryket hagytam a végére. A későbbi projektekben terveztem a tailwindet kipróbálni, egész barátságosnak tűnik.
 
 ## A projekt jövője.
 
-Ezen a ponton jutottam el oda, hogy elég lesz -e vajon ha itt megállok. A frontend ugyan készen volt, de az oldal működése koránt sem volt 100%-os. Ahhoz, hogy az account creation, login és a webshop funkciók úgy működjenek, ahogy azt szerettem volna, szükségem volt szerver oldali programozásra is. Node.js-el, express-el, mongodb-vel és firebase auth-al találkoztam a hallgatott kurzusok során, de egyik sem volt az erősségem. Belevágtam. 
+A későbbiekben tervezek az oldalon expresst és mongodb-t használni, hogy jobban átlássam, mi történik szerver oldalon.
+
+Update: 
+
+03.20.
+Firebase integrálást backend nélkül sikerült megvalósítani. 
 
 ## További megjegyzések
 
 A projekt készítése alatt felhasznált képek csak gyakorlás céljából lettek használva, nem célom reklámozni egy kávézó franchiset vagy kávémárkát sem.
-Március (2023) végéig még szeretnék két weboldalon dolgozni, az egyik egy blog applikáció lesz a másik pedig egy CV weboldal. 
+Március (2023) végéig még szeretnék egy weboldalon dolgozni, ami egy CV weboldal lesz. 
 
