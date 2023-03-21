@@ -31,6 +31,9 @@ Update:
 03.20.
 Firebase integrálást backend nélkül sikerült megvalósítani. 
 
+03.21.
+A firebase config adatait a .env.local nevű fájlban tároltam, hogy ne kerüljenek érzékeny adatok a public repoba. Screenshot kerül az oldalról a cv-mbe és az ehhez a repohoz tartozó github link.
+
 ## További megjegyzések
 
 A projekt készítése alatt felhasznált képek csak gyakorlás céljából lettek használva, nem célom reklámozni egy kávézó franchiset vagy kávémárkát sem.
